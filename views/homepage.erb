@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
   </head>
 <body>
-  <%if session[:error] %>
-    <p><%= session.delete(:error) %></p>
+  <%if session[:notification] %>
+    <p><%= session.delete(:notification) %></p>
   <% end %>
 
   <ul>
     <% @filenames.each do |file| %>
-    <li><a href="/<%= file %>"><%= file %></a></li>
+    <li>
+      <a href="/<%= file %>"><%= file %></a>
+      <form action="/<%= file %>/edit" method="get">
+        <button type="submit">Edit</button>
+      </form>
+    </li>
     <% end %>
   </ul>
 </body>

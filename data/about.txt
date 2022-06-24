@@ -1,2 +1,0 @@
-Here, you'll find the dates of all the ruby releases in the history file, as well as the lyrics to Changes by David Bowie in the changes file. 
-Feel free to hum Bowie while you read through the releases page!
