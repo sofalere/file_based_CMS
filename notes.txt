@@ -1,0 +1,22 @@
+2. Adding an Index Page
+
+When a user visits the home page, they should see a list of the documents in the CMS: history.txt, changes.txt and about.txt:
+
+Implementation:
+  use `Dir.each` to render each file name in a list
+  
+3. Viewing Text Files
+
+ - text files on homepage are links
+ - path is `/filename`
+ - render plain text
+ 
+Implementation: 
+- anchor an href in the homepage erb file
+  - path = /:filename
+  - pass filename as param
+- define route get `/:filename`
+  - load the contents of file
+  - link to erb file page
+- creat file.erb
+  - display text 

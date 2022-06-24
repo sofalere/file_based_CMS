@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>CMS files</title>
+    <meta charset="UTF-8">
+  </head>
+<body>
+  <%if session[:error] %>
+    <p><%= session.delete(:error) %></p>
+  <% end %>
+
+  <ul>
+    <% @filenames.each do |file| %>
+    <li><a href="/<%= file %>"><%= file %></a></li>
+    <% end %>
+  </ul>
+</body>
+</html>
